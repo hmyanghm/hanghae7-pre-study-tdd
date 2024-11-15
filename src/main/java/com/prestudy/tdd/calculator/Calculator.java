@@ -1,4 +1,4 @@
-package com.prestudy.tdd;
+package com.prestudy.tdd.calculator;
 
 public class Calculator {
 

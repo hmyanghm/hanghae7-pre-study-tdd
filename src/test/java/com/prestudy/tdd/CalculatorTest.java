@@ -1,6 +1,8 @@
 package com.prestudy.tdd;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+import com.prestudy.tdd.calculator.Calculator;
 import org.junit.jupiter.api.Test;
 
 public class CalculatorTest {
