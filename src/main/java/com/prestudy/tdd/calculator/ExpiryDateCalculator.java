@@ -1,12 +1,16 @@
 package com.prestudy.tdd.calculator;
 
+import ch.qos.logback.core.net.SyslogOutputStream;
+
 import java.time.LocalDate;
 import java.time.YearMonth;
 
 public class ExpiryDateCalculator {
 
     public LocalDate calculateExpiryDate(PayData payData) {
-        int addedMonths = payData.getPayAmount() / 10_000;
+        int year = payData.getPayAmount() / 100_000;
+        int month = payData.getPayAmount() % 100_000 / 10_000;
+        int addedMonths = year * 12 + month;
         if (payData.getFirstBillingDate() != null) {
             return expiryDateUsingFirstBillingDate(payData, addedMonths);
         } else {
